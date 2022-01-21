@@ -24,7 +24,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/todos' element={<Todos />} />
-            <Route path='/searchTodo' element={<Search />} />
+            <Route path='/search' element={<Search />} />
           </Routes>
         </main>
       </BrowserRouter>

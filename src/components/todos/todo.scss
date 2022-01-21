@@ -4,12 +4,6 @@
 .container{
     grid-template-columns: 2fr 1fr;
     min-height: 700px;
-    li{
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        background: $light;
-    }
     .content{
         border-radius: $base-border-radius;
     }
@@ -33,6 +27,39 @@
             gap: 5px;
         }
     }
+}
+button {
+    border: $base-border-thickness solid $dark;
+    border-radius: $base-border-radius;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover{
+        background-color: $dark;
+        color: $light;
+    }
+}
+.btn-dark{
+    border: $base-border-thickness solid $light;
+    border-radius: $base-border-radius;
+    background-color: transparent;
+    cursor: pointer;
+    color: $light;
+    &:hover{
+        background-color: $light;
+        color: $dark;
+    }
+}
+.search{
+    min-height: 700px;
+    .btn-container{
+        justify-content: space-around;
+    }
+}
+li{
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background: $light;
     .desc{
         justify-content: center;
         align-items: center;
@@ -40,15 +67,8 @@
     .img-container{
         justify-content: space-between;
         align-items: center;
-    }
-    button {
-        border: $base-border-thickness solid $dark;
-        border-radius: $base-border-radius;
-        background-color: transparent;
-        cursor: pointer;
-        &:hover{
-            background-color: $dark;
-            color: $light;
+        img{
+            cursor: pointer;
         }
     }
 }

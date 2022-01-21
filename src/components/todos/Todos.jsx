@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 // redux
 import { useSelector, useDispatch } from 'react-redux'
 import { addTodo, deleteTodo, updateTodo, updateCompleted } from '../../redux/features'
