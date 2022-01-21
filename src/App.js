@@ -1,8 +1,5 @@
-import { useEffect } from "react"
-// redux
-import { useSelector, useDispatch } from 'react-redux'
-import { bindActionCreators } from "redux"
-import { actionCreator } from './redux/export'
+// styles
+import './scss/base.scss'
 // router
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 // components
@@ -12,16 +9,6 @@ import Search from './components/search/Search'
 import Todos from './components/todos/Todos'
 
 const App = () => {
-
-  const state = useSelector((state) => state)
-  const dispatch = useDispatch()
-  const { addTodo, editTodo, deleteTodo } = bindActionCreators(actionCreator, dispatch)
-
-  useEffect(() => {
-    localStorage.setItem("todo", JSON.stringify(state))
-  }, [state])
-
-  console.log(state)
 
   return (
     <BrowserRouter>

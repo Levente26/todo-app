@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    input{
+        background: $secondary;
+        width: 280px;
+        height: 30px;
+        border-radius: $base-border-radius;
+    }
+}
