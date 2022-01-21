@@ -7,20 +7,28 @@ import Navbar from './components/navbar/Navbar'
 import Home from './components/home/Home'
 import Search from './components/search/Search'
 import Todos from './components/todos/Todos'
+// theme
+import ThemeSelector from './components/ThemeSelector'
+import { useTheme } from './hooks/useTheme'
 
 const App = () => {
 
+  const { mode } = useTheme()
+
   return (
-    <BrowserRouter>
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/todos' element={<Todos />} />
-          <Route path='/searchTodo' element={<Search />} />
-        </Routes>
-      </main>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <main className={`App ${mode}`}>
+          <ThemeSelector />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/todos' element={<Todos />} />
+            <Route path='/searchTodo' element={<Search />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </div>
   );
 }
 

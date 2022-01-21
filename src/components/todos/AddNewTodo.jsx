@@ -1,6 +1,9 @@
 import { useState } from "react"
+// theme
+import { useTheme } from '../../hooks/useTheme'
 
 const AddNewTodo = ( { addTodo, dispatch } ) => {
+    const { mode } = useTheme()
     const [title, setTitle] = useState("")
     const [desc, setDesc] = useState("")
 

@@ -1,0 +1,22 @@
+.theme-selector{
+    justify-content: flex-end;
+    align-items: center;
+    // margin: 20px auto;
+    // min-height: 100px;
+}
+
+.theme-buttons div{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.mode-toggle {
+    margin-right: auto;
+}
+
+.mode-toggle img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }

@@ -5,6 +5,8 @@ import App from './App';
 import { Provider } from 'react-redux'
 import { configureStore } from "@reduxjs/toolkit"
 import todoReducer from './redux/features'
+// theme 
+import { ThemeProvider } from './context/ThemeContext';
 
 const store = configureStore({
   reducer: {
@@ -15,7 +17,9 @@ const store = configureStore({
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+    <ThemeProvider>
       <App />
+    </ThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

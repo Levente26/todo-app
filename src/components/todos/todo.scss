@@ -3,6 +3,7 @@
 
 .container{
     grid-template-columns: 2fr 1fr;
+    min-height: 700px;
     li{
         align-items: center;
         flex-direction: column;

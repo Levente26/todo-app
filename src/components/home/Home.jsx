@@ -2,9 +2,12 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import './home.scss'
 import '../../scss/utilities.scss'
+// theme
+import { useTheme } from '../../hooks/useTheme'
 
 
 const Home = () => {
+    const { mode } = useTheme()
     const navigate = useNavigate()
     const [name, setName] = useState("")
 

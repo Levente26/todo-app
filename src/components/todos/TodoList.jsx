@@ -1,7 +1,9 @@
 import { useState } from "react"
-
+// theme
+import { useTheme } from '../../hooks/useTheme'
 
 const TodoList = ( { list, deleteTodo, dispatch } ) => {
+    const { mode } = useTheme()
 
     const handleDelete = (id) => {
         dispatch(deleteTodo({id: id}))
