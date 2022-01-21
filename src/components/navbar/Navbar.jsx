@@ -3,9 +3,9 @@ import './navbar.scss'
 
 const Navbar = () => {
     return (
-        <nav>
-            <h1>Todo App</h1>
-            <Link to='/search' className='link'>Keresés</Link>
+        <nav className='p-1 display-f'>
+            <h1 className='font-xl p-1'>Todo App</h1>
+            <Link to='/search' className='link p-1'>Keresés</Link>
         </nav>
     )
 }

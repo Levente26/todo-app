@@ -18,27 +18,29 @@ const AddNewTodo = ( { addTodo, dispatch } ) => {
     
     return (
         <>
-            <h3>Új Teendő</h3>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <span>Teendő neve:</span>
-                    <input 
+            <h3 className="ml-1 mr-1 mb-2 font-lg">Új Teendő</h3>
+            <form className="p-1" onSubmit={handleSubmit}>
+                <label className="display-f">
+                    <span>Teendő címe:</span>
+                    <input
+                        className="pl-1" 
                         type='text'
                         required
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
                 </label>
-                <label>
+                <label className="display-f">
                     <span>Leírás:</span>
                     <input 
+                        className="pl-1"
                         type='text'
                         required
                         value={desc}
                         onChange={(e) => setDesc(e.target.value)}
                     />
                 </label>
-                <button>Hozzáadás</button>
+                <button className="mt-2 p-2 font-md">Hozzáadás</button>
             </form>
         </>
     )

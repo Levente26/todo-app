@@ -8,15 +8,15 @@ const TodoList = ( { list, deleteTodo, dispatch } ) => {
     }
 
     return (
-        <div>
+        <ul>
             {list && list.map(todo => (
-                <div>
-                    <h2>{todo.title}</h2>
-                    <p>{todo.desc}</p>
-                    <button onClick={() => handleDelete(todo.id)}>delete</button>
-                </div>
+                <li className="br-sm display-f p-1 m-2 mr-4">
+                    <h2 className="font-xxl br-default">{todo.title}</h2>
+                    <p className="p-1 font-md ">{todo.desc}</p>
+                    <button className="mt-2 p-2 font-md" onClick={() => handleDelete(todo.id)}>delete</button>
+                </li>
             ))}
-        </div>
+        </ul>
     )
 }
 export default TodoList

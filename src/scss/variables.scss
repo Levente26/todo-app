@@ -1,14 +1,14 @@
 $primary: #D3D3D3 !default;
 $secondary: #A9A9A9 !default;
-$error: #d32752 !default;
-$info : #f6c31c !default;
+$light: #ffffff !default;
+$dark : #1d1d1d !default;
 
 // colors
 $colors: (
     "primary": $primary,
     "secondary": $secondary,
-    "error": $error,
-    'info': $info,
+    "light": $light,
+    "dark": $dark,
     "blue": #1919e6,
     "red": #e61919,
     "yellow": #e6e619,
@@ -32,7 +32,7 @@ $base-border-radius: 5px;
 $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 
 // font sizes
-$base-font-size: 1rem;
+$base-font-size: 1.2rem;
 $font-size-sm: $base-font-size * 0.75;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;
