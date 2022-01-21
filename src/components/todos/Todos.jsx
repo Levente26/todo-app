@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 // redux
 import { useSelector, useDispatch } from 'react-redux'
 import { addTodo, deleteTodo, updateTodo } from '../../redux/features'
@@ -13,7 +13,6 @@ const Todos = () => {
     const todoList = useSelector((state) => state.todos.value);
     const dispatch = useDispatch()
 
-
     console.log(todoList)
 
     return (
@@ -22,7 +21,7 @@ const Todos = () => {
                 <AddNewTodo dispatch={dispatch} addTodo={addTodo} />
             </div>
             <div>
-                <TodoList list={todoList} />
+                <TodoList dispatch={dispatch} deleteTodo={deleteTodo} list={todoList} />
             </div>
         </div>
     )

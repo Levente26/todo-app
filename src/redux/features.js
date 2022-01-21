@@ -10,18 +10,25 @@ export const todoSlice = createSlice({
     },
 
     deleteTodo: (state, action) => {
-      state.value = state.value.filter((user) => user.id !== action.payload.id);
+      state.value = state.value.filter((todo) => todo.id !== action.payload.id);
     },
 
-    updateTodo: (state, action) => {
+    updateTodoDesc: (state, action) => {
       state.value.map((todo) => {
         if (todo.id === action.payload.id) {
           todo.desc = action.payload.desc;
         }
       });
     },
+    updateCompleted: (state, action) => {
+      state.value.map((todo) => {
+        if (todo.id === action.payload.id) {
+          todo.isCompleted = action.payload.isCompleted;
+        }
+      });
+    },
   },
 });
 
-export const { addTodo, deleteTodo, updateTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo, updateTodoDesc } = todoSlice.actions;
 export default todoSlice.reducer;
