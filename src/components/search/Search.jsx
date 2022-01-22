@@ -31,11 +31,11 @@ const Search = () => {
                 <button 
                     className={mode === "dark" ? 'p-1 m-1 btn-dark' : 'p-1 m-1'} 
                     onClick={() => setList(isCompleted)}
-                > Befejezett </button>
+                > Teljesített </button>
                 <button 
                     className={mode === "dark" ? 'p-1 m-1 btn-dark' : 'p-1 m-1'} 
                     onClick={() => setList(notCompleted)}
-                > Folyamatban lévő </button>
+                >  Aktív </button>
                 <button 
                     className={mode === "dark" ? 'p-1 m-1 btn-dark' : 'p-1 m-1'} 
                     onClick={navigateToTodosPage}

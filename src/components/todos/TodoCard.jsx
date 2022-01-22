@@ -66,7 +66,7 @@ const TodoCard = ( { todo, deleteTodo, dispatch, updateTodo, updateCompleted } )
 
 
     return (
-        <div>
+        <div className={todo.isCompleted ? 'completed' : "todo"}>
             <h2 className="font-xxl br-default">
                 {!updateInput ? 
                     todo.title 

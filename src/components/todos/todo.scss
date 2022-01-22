@@ -11,8 +11,18 @@
     }
     .content{
         border-radius: $base-border-radius;
+        
         @include md {
             margin: 0;
+        }
+        .completed{
+            background: $primary;
+            width: 100%;
+            border-radius: $base-border-radius;
+        }
+        .todo{
+            width: 100%;
+            border-radius: $base-border-radius;
         }
     }
     .sidebar {
