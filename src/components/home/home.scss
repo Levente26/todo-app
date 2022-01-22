@@ -2,6 +2,9 @@
 
 .home-form{
     min-height: 80vh;
+    .dark{
+        color: $light;
+    }
 }
 
 form {

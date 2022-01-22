@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <form className={`App ${mode} display-f p-1 home-form`}>
-            <label>Szia, kérlek add meg a neved</label>
+            <label className={`App ${mode}`}>Szia, kérlek add meg a neved</label>
                 <input 
                     type='text'
                     value={name}
