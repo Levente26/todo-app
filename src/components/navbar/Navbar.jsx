@@ -6,12 +6,11 @@ import { useEffect, useState } from 'react'
 
 const Navbar = () => {
     const { color, changeColor } = useTheme()
-    // const [name, setName] = useState("")
+    const [name, setName] = useState("")
 
-    // useEffect(() => {
-    //     localStorage.getItem("name")
-    // },[name])
-    const name = localStorage.getItem("name")
+    setInterval(() => {
+        setName(localStorage.getItem("name"))
+    },5000)
 
     return (
         <nav className='p-1 display-f' style={{background: color}}>
