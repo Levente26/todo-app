@@ -25,20 +25,20 @@ const TodoCard = ( { todo, deleteTodo, dispatch, updateTodo, updateCompleted } )
                 desc: updateDesc,
             }))
         } 
-        if(updateDesc === ""){
+        else if(updateDesc === ""){
             dispatch(updateTodo({
                 id: id,
                 title: updateTitle,
                 desc: desc,
             }))
         } 
-        if(updateDesc === '' && updateTitle === ""){
+        else if(updateDesc === "" && updateTitle === ""){
             dispatch(updateTodo({
-                id: id,
-                title: title,
-                desc: desc,
+                title,
+                desc,
             }))
-        } else {
+        } 
+        else {
             dispatch(updateTodo({
                 id: id,
                 title: updateTitle,

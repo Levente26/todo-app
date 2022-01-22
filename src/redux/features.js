@@ -17,7 +17,7 @@ export const todoSlice = createSlice({
       state.value.map((todo) => {
         if (todo.id === action.payload.id) {
           todo.title = action.payload.title
-          todo.desc = action.payload.desc;
+          todo.desc = action.payload.desc
         }
       });
     },
