@@ -1,9 +1,12 @@
 @import '../../scss/variables';
 
+.home-form{
+    min-height: 80vh;
+}
+
 form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
     gap: 10px;
     input{
@@ -11,5 +14,26 @@ form {
         width: 280px;
         height: 30px;
         border-radius: $base-border-radius;
+    }
+    button {
+        border: $base-border-thickness solid $dark;
+        border-radius: $base-border-radius;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover{
+            background-color: $dark;
+            color: $light;
+        }
+    }
+    .btn-dark{
+        border: $base-border-thickness solid $light;
+        border-radius: $base-border-radius;
+        background-color: transparent;
+        cursor: pointer;
+        color: $light;
+        &:hover{
+            background-color: $light;
+            color: $dark;
+        }
     }
 }

@@ -20,18 +20,16 @@ const Home = () => {
     }
 
     return (
-            <form>
-                <label>
-                    <span className='' >Szia, kérlek add meg a neved</span>
-                    <input 
-                        type='text'
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="ml-1 pl-1"
-                    />
-                </label>
-                <button onClick={handleClick}>Tovább</button>
-            </form>
+        <form className={`App ${mode} display-f p-1 home-form`}>
+            <label>Szia, kérlek add meg a neved</label>
+                <input 
+                    type='text'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="ml-1 pl-1"
+                />
+            <button className={mode === "dark" ? 'p-1 m-1 btn-dark' : 'p-1 m-1'} onClick={handleClick}>Tovább</button>
+        </form>
     )
 }
 export default Home

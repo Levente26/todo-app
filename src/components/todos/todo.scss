@@ -1,11 +1,19 @@
 @import '../../scss/variables';
+@import '../../scss/breakpoints';
 
 
 .container{
     grid-template-columns: 2fr 1fr;
     min-height: 700px;
+    @include md {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
     .content{
         border-radius: $base-border-radius;
+        @include md {
+            margin: 0;
+        }
     }
     .sidebar {
         background: $light;
@@ -14,12 +22,19 @@
         top: 20%;
         height: 400px;
         border-radius: $base-border-radius;
-        h3{
+        @include md {
+            margin: 0;
+            grid-row: 1/2;
+            position: static;
+        }
+        h3 {
             text-align: center;
+            margin-left: 0 auto;
         }
         form{
             width: 100%;
             flex-direction: column;
+            justify-content: center;
             gap: 20px;
         }
         label {
@@ -53,6 +68,11 @@ button {
     min-height: 700px;
     .btn-container{
         justify-content: space-around;
+        button {
+            @include sm {
+                margin: 0;
+            }
+        }
     }
 }
 li{
@@ -63,6 +83,9 @@ li{
     .desc{
         justify-content: center;
         align-items: center;
+    }
+    h2{
+        text-align: center;
     }
     .img-container{
         justify-content: space-between;
