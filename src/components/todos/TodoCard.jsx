@@ -10,7 +10,6 @@ const TodoCard = ( { todo, deleteTodo, dispatch, updateTodo, updateCompleted } )
     const [updateTitle, setUpdateTitle] = useState("")
     const [updateDesc, setUpdateDesc] = useState("")
 
-
     const handleDelete = (id) => {
         dispatch(deleteTodo({id: id}))
     }
@@ -62,8 +61,6 @@ const TodoCard = ( { todo, deleteTodo, dispatch, updateTodo, updateCompleted } )
             isCompleted: false,
         }))
     }
-    console.log(todo)
-
 
     return (
         <div className={todo.isCompleted ? 'completed' : "todo"}>
@@ -94,7 +91,9 @@ const TodoCard = ( { todo, deleteTodo, dispatch, updateTodo, updateCompleted } )
                             className="pl-1 mt-1" 
                             placeholder={todo.desc}
                         />
-                        <button className="p-1 m-1 br-default" onClick={() => handleUpdate(todo.id, todo.title, todo.desc)}>
+                        <button className="p-1 m-1 br-default" 
+                            onClick={() => handleUpdate(todo.id, todo.title, todo.desc)}
+                        > 
                             Kész
                         </button>
                     </form>

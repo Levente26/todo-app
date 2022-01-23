@@ -28,7 +28,12 @@ const Home = () => {
                     onChange={(e) => setName(e.target.value)}
                     className="ml-1 pl-1"
                 />
-            <button className={mode === "dark" ? 'p-1 m-1 btn-dark' : 'p-1 m-1'} onClick={handleClick}>Tovább</button>
+            <button 
+                className={mode === "dark" ? 'p-1 m-1 btn-dark pulse' : 'p-1 m-1 pulse'} 
+                onClick={handleClick}
+            >
+                Tovább
+            </button>
         </form>
     )
 }

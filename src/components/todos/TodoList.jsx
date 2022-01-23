@@ -1,8 +1,6 @@
 import TodoCard from "./TodoCard"
 
 const TodoList = ( { list, deleteTodo, dispatch, updateTodo, updateCompleted } ) => {
-    
-
     return (
         <ul>
             {list && list.map(todo => (

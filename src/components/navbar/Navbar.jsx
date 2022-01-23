@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import './navbar.scss'
 // theme
 import { useTheme } from '../../hooks/useTheme'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Navbar = () => {
-    const { color, changeColor } = useTheme()
+    const { color } = useTheme()
     const [name, setName] = useState("")
 
     setInterval(() => {
@@ -17,7 +17,7 @@ const Navbar = () => {
             <h1 className='font-xl p-1'>Todo App</h1>
             { name && <div className='display-f searchbar-name'>
                 <Link to='/search' className='link p-1 font-md'>Keresés</Link>
-                <p className='p-1 font-lg'>Szia, {name}</p>
+                <p className='p-1 font-lg'>Szia {name}</p>
             </div>}
         </nav>
     )

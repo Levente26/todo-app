@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { FakeTodo } from "./FakeTodo";
+
 
 export const todoSlice = createSlice({
   name: "todos",
-  initialState: { value: FakeTodo },
+  initialState: { value: [] },
   reducers: {
     addTodo: (state, action) => {
       state.value.push(action.payload);
